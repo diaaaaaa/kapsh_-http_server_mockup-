@@ -1,4 +1,4 @@
-# kapsh_-http_server_mockup-
+# kapsh_http_server_mockup
 Mein Team ist in der Kapsch TrafficCom für die technische Integration der Systemkomponenten zur Gesamtlösung verantwortlich.
 Dabei verwenden wir mitunter ein für unsere Zwecke angepasstes Testframework basierend auf dem Robot-Framework 
 (http://robotframework.org).
