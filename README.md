@@ -67,11 +67,11 @@ Der HTTP Mockup Server wird über die Command Line gestartet und akzeptiert folg
      {...},]
      
      # BEISPIEL:
-     Request: GET localhost:1234/set_response?path=/greet/de&amp&content=hallo
+     Request: GET localhost:1234/set_response?path=/greet/de&content=hallo
      Response: 200 
-     Request: GET localhost:1234/set_response?path=/greet/it&amp&content=ciao
+     Request: GET localhost:1234/set_response?path=/greet/it&content=ciao
      Response: 200 
-     Request: GET localhost:1234/set_response?path=/greet/foo&amp&state=500
+     Request: GET localhost:1234/set_response?path=/greet/foo&state=500
      Response: 200
      Request: GET localhost:1234/greet/de?key=value
      Response: 200:hallo
