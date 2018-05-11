@@ -34,21 +34,19 @@ public class EndPoint {
         return "Response: 200 :"+ setJson;
     }
 
-    @GetMapping("/{path}/{content}/{url}")
-    String get(@PathVariable String path,@PathVariable String content,@PathVariable String url) {
-        {
-            System.out.println(url);
-            if (url.equalsIgnoreCase(this.url)) {
-                return "Response: 200:" + setJson.stream()
-                        .filter(element -> element.contains(path))
-                        .filter(element -> element.contains(content))
-                        .findFirst().toString();
-                //  .orElse("Response: 404");
-            } else {
-                return "Response: 404";
-            }
-        }
+    @GetMapping("/{path}/{content}")
+    String get(@PathVariable String path,@PathVariable String content) {
+        String pathRes = setJson.stream()
+                .filter(element -> element.contains(path))
+                .filter(element -> element.contains(content))
+                .findFirst().toString();
+        if (pathRes.equalsIgnoreCase("Optional.empty"))
+            return "Response: 404";
+        else
+            return "Response: 200:" +pathRes;
+
     }
+
 
 
     @PostMapping("/set_response")
