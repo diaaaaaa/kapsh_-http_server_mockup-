@@ -80,9 +80,7 @@ Der HTTP Mockup Server wird über die Command Line gestartet und akzeptiert folg
      Request: GET localhost:1234/greet/xxx 
      Response: 404
      Request: GET localhost:1234/protocol
-     Response: 200
-     
-     :[{"request":{"path": "greet/de","timestamp": 1480590417312,"parameters" : {"key":"value"}},
+     Response: 200:[{"request":{"path": "greet/de","timestamp": 1480590417312,"parameters" : {"key":"value"}},
         "response":{"state": 200,"content": "hallo"},},
         {"request":{"path": "greet/foo","timestamp": 1480590427312,"parameters" : ""},
         "response":{"state": 500,"content": ""},},
