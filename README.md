@@ -41,16 +41,17 @@ Der HTTP Mockup Server wird über die Command Line gestartet und akzeptiert folg
      
      MOCK RESPONSE:          
      
-     URI Path: /&lt;path>     
+     URI Path:/<path>     
      HTTP Methode: GET|POST
      Anfrage auf einen beliebigen Pfad mit beliebigen Query Parametern
+     
      Antwort:
      HTTP Status 404: wenn keine Antwort für diese Anfrage gespeichert wurde
      Wurde eine Antwort durch /set_response abgespeichert, wird der state und der content dieser gespeicherten Antwort
      zurück gesendet.
      
      PROTOCOL
-     URI Path: /protocol
+     URI Path:/protocol
      HTTP Methode: GET 
      
      Der Server liefert das Kommunikationsprotokoll als JSON Objekt zurück.
@@ -59,11 +60,11 @@ Der HTTP Mockup Server wird über die Command Line gestartet und akzeptiert folg
      
      Antwort:
      HTTP Status 200: Das Protokoll als JSON Objekt
-     [{"request":{"path": : <Der URI Pfad der Anfrage>,
+     [{"request":{"path":<Der URI Pfad der Anfrage>,
      "timestamp": <Zeitstempel der Anfrage>, 
      "parameters"<Die Query Parameter der Anfrage>},
-     "response":{"state": &lt;HTTP Status der Antwort>,
-     "content": <Der Daten der Antwort>}},
+     "response":{"state":<HTTP Status der Antwort>,
+     "content":<Der Daten der Antwort>}},
      {...},]
      
      # BEISPIEL:
